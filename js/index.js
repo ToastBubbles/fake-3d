@@ -3,6 +3,8 @@ let cubeHalfWidth = 50;
 let mouseX = 0;
 let mouseY = 0;
 
+let mouseMode = 3;
+
 let cube = {
 
     /*point1: [100,1,100],
@@ -16,13 +18,13 @@ let cube = {
 
 
     point1: {
-        x: 1,
-        y: 1,
+        x: -100,
+        y: -100,
         z: 100
     },
     point2: {
         x: 100,
-        y: 1,
+        y: -100,
         z: 100
     },
     point3: {
@@ -31,29 +33,29 @@ let cube = {
         z: 100
     },
     point4: {
-        x: 1,
+        x: -100,
         y: 100,
         z: 100
     },
     point5: {
-        x: 1,
-        y: 1,
-        z: 100
+        x: -100,
+        y: -100,
+        z: -100
     },
     point6: {
         x: 100,
-        y: 1,
-        z: 100
+        y: -100,
+        z: -100
     },
     point7: {
         x: 100,
         y: 100,
-        z: 100
+        z: -100
     },
     point8: {
-        x: 1,
+        x: -100,
         y: 100,
-        z: 100
+        z: -100
     },
 
 
@@ -65,7 +67,7 @@ function lerp(){
         updateSquare();
         translation1();
         lerp();
-      }, "5");
+      }, "20");
 }
 
 function updateSquare(){
@@ -94,8 +96,14 @@ function generateConnections(){
         svg.innerHTML += `<polyline class="connectors" id="connector${i}" points="" style="fill:white;stroke:blue;stroke-width:4"></polyline>`
     }
 }
-
+let r = 0.05;
+let r2 = 0.05;
+let r3 = 0.05;
 function translation1(){
+    //r += 0.01;
+    //r2++;
+    //r3++;
+    if(mouseMode === 0){
     let screenHalfHeight = (window.screen.height - window.screen.height/2 - mouseY)/3//(window.screen.height - window.screen.height/2 - mouseY)/(window.screen.height)//window.screen.height/2 - (mouseY/window.screen.height )
     let screenHalfWidth = (window.screen.width- window.screen.width/2 - mouseX)/3
     cube.point5.x = cube.point1.x - cubeHalfWidth+screenHalfWidth;
@@ -119,7 +127,67 @@ function translation1(){
     cube.point4.x = mouseX - cubeHalfWidth;
     cube.point4.y = mouseY + cubeHalfWidth;
 
-    console.log(screenHalfHeight)
+    //console.log(screenHalfHeight)
+    }
+    else if(mouseMode ===1){
+
+            
+            cube.point1.x = mouseX - cubeHalfWidth;
+            cube.point1.y = mouseY - cubeHalfWidth;
+        
+            cube.point2.x = mouseX + cubeHalfWidth;
+            cube.point2.y = mouseY - cubeHalfWidth;
+        
+            cube.point3.x = mouseX + cubeHalfWidth;
+            cube.point3.y = mouseY + cubeHalfWidth;
+        
+            cube.point4.x = mouseX - cubeHalfWidth;
+            cube.point4.y = mouseY + cubeHalfWidth;
+
+    }
+    else{
+        rotate(r,r2,r3);
+    }
+}
+
+function rotate(pitch, roll, yaw) {
+    var cosa = Math.cos(yaw);
+    var sina = Math.sin(yaw);
+
+    var cosb = Math.cos(pitch);
+    var sinb = Math.sin(pitch);
+
+    var cosc = Math.cos(roll);
+    var sinc = Math.sin(roll);
+
+    var Axx = cosa*cosb;
+    var Axy = cosa*sinb*sinc - sina*cosc;
+    var Axz = cosa*sinb*cosc + sina*sinc;
+
+    var Ayx = sina*cosb;
+    var Ayy = sina*sinb*sinc + cosa*cosc;
+    var Ayz = sina*sinb*cosc - cosa*sinc;
+
+    var Azx = -sinb;
+    var Azy = cosb*sinc;
+    var Azz = cosb*cosc;
+    var cubepoints = [cube.point1,cube.point2,cube.point3,cube.point4,cube.point5,cube.point6,cube.point7,cube.point8,];
+    for (var i = 0; i < cubepoints.length; i++) {
+        var px = cubepoints[i].x;
+        var py = cubepoints[i].y;
+        var pz = cubepoints[i].z;
+
+        // if(i >= 5){
+        // cubepoints[i].x = (cubepoints[i - 4].x - 10) + Axx*px + Axy*py + Axz*pz;
+        // cubepoints[i].y = (cubepoints[i - 4].y - 10) + Ayx*px + Ayy*py + Ayz*pz;
+        // cubepoints[i].z = (cubepoints[i - 4].z - 10) + Azx*px + Azy*py + Azz*pz;
+        // }else{
+        cubepoints[i].x = Axx*px + Axy*py + Axz*pz;
+        cubepoints[i].y = Ayx*px + Ayy*py + Ayz*pz;
+        cubepoints[i].z = Azx*px + Azy*py + Azz*pz;
+        
+
+    }
 }
 
 onmousemove = function(e){mouseX = e.clientX;  mouseY = e.clientY; /*console.log(mouseX)*/};
