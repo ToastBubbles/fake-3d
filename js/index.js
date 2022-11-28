@@ -1,4 +1,4 @@
-let translationLerp = 0;
+
 let cubeHalfWidth = 50;
 let mouseX = 0;
 let mouseY = 0;
@@ -36,36 +36,36 @@ let cube = {
         z: 100
     },
     point5: {
-        x: translationLerp + 1,
-        y: translationLerp + 1,
+        x: 1,
+        y: 1,
         z: 100
     },
     point6: {
-        x: translationLerp + 100,
-        y: translationLerp + 1,
+        x: 100,
+        y: 1,
         z: 100
     },
     point7: {
-        x: translationLerp + 100,
-        y: translationLerp + 100,
+        x: 100,
+        y: 100,
         z: 100
     },
     point8: {
-        x: translationLerp + 1,
-        y: translationLerp + 100,
+        x: 1,
+        y: 100,
         z: 100
     },
 
 
 }
 function lerp(){
-    translationLerp++;
+    
     setTimeout(() => {
         
         updateSquare();
         translation1();
         lerp();
-      }, "180");
+      }, "5");
 }
 
 function updateSquare(){
@@ -83,7 +83,7 @@ function updateSquare(){
     document.getElementById("connector2").setAttribute("points",`${cube.point3.x},${cube.point3.y} ${cube.point7.x},${cube.point7.y}`);
     document.getElementById("connector3").setAttribute("points",`${cube.point4.x},${cube.point4.y} ${cube.point8.x},${cube.point8.y}`);
     
-    console.log(square1.getAttribute("points"))
+    //console.log(square1.getAttribute("points"))
 }
 
 
@@ -96,14 +96,16 @@ function generateConnections(){
 }
 
 function translation1(){
-    cube.point5.x++;
-    cube.point5.y++;
-    cube.point6.x++;
-    cube.point6.y++;
-    cube.point7.x++;
-    cube.point7.y++;
-    cube.point8.x++;
-    cube.point8.y++;
+    let screenHalfHeight = (window.screen.height - window.screen.height/2 - mouseY)/3//(window.screen.height - window.screen.height/2 - mouseY)/(window.screen.height)//window.screen.height/2 - (mouseY/window.screen.height )
+    let screenHalfWidth = (window.screen.width- window.screen.width/2 - mouseX)/3
+    cube.point5.x = cube.point1.x - cubeHalfWidth+screenHalfWidth;
+    cube.point5.y = (cube.point1.y - cubeHalfWidth)+screenHalfHeight;
+    cube.point6.x = cube.point2.x - cubeHalfWidth+screenHalfWidth;
+    cube.point6.y = (cube.point2.y - cubeHalfWidth)+screenHalfHeight;
+    cube.point7.x = cube.point3.x - cubeHalfWidth+screenHalfWidth;
+    cube.point7.y = (cube.point3.y - cubeHalfWidth)+screenHalfHeight;
+    cube.point8.x = cube.point4.x - cubeHalfWidth+screenHalfWidth;
+    cube.point8.y = (cube.point4.y - cubeHalfWidth)+screenHalfHeight;
 
     cube.point1.x = mouseX - cubeHalfWidth;
     cube.point1.y = mouseY - cubeHalfWidth;
@@ -116,9 +118,11 @@ function translation1(){
 
     cube.point4.x = mouseX - cubeHalfWidth;
     cube.point4.y = mouseY + cubeHalfWidth;
+
+    console.log(screenHalfHeight)
 }
 
-onmousemove = function(e){mouseX = e.clientX;  mouseY = e.clientY; console.log(mouseX)};
+onmousemove = function(e){mouseX = e.clientX;  mouseY = e.clientY; /*console.log(mouseX)*/};
 // function onmousemove (axis){
 //     mousePos = function(e){console.log("mouse location:", e.clientX, e.clientY)};
 //     if axis
