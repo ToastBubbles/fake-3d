@@ -60,11 +60,17 @@ let cube = {
 
 
 }
+
+function initialize(){
+    rotate(0,.788,0);
+}
+
 function lerp(){
     
     setTimeout(() => {
         
         updateSquare();
+        generateConnectors();
         translation1();
         lerp();
       }, "20");
@@ -80,12 +86,32 @@ function updateSquare(){
     
     
     
-    document.getElementById("connector0").setAttribute("points",`${cube.point1.x},${cube.point1.y} ${cube.point5.x},${cube.point5.y}`);
-    document.getElementById("connector1").setAttribute("points",`${cube.point2.x},${cube.point2.y} ${cube.point6.x},${cube.point6.y}`);
-    document.getElementById("connector2").setAttribute("points",`${cube.point3.x},${cube.point3.y} ${cube.point7.x},${cube.point7.y}`);
-    document.getElementById("connector3").setAttribute("points",`${cube.point4.x},${cube.point4.y} ${cube.point8.x},${cube.point8.y}`);
+    //document.getElementById("connector0").setAttribute("points",`${cube.point1.x},${cube.point1.y} ${cube.point5.x},${cube.point5.y}`);
+    //document.getElementById("connector1").setAttribute("points",`${cube.point2.x},${cube.point2.y} ${cube.point6.x},${cube.point6.y}`);
+    //document.getElementById("connector2").setAttribute("points",`${cube.point3.x},${cube.point3.y} ${cube.point7.x},${cube.point7.y}`);
+    //document.getElementById("connector3").setAttribute("points",`${cube.point4.x},${cube.point4.y} ${cube.point8.x},${cube.point8.y}`);
     
     //console.log(square1.getAttribute("points"))
+}
+//let lerpVal = 100;
+const lerpVal = (a, b, amount) => (1 - amount) * a + amount * b;
+let lerpAmount = 1;
+function generateConnectors(){
+    
+    if(lerpAmount > 0){
+    document.getElementById("connector0").setAttribute("points",`${cube.point1.x},${cube.point1.y} ${lerpVal(cube.point5.x, cube.point1.x,lerpAmount)},${lerpVal(cube.point5.y, cube.point1.y, lerpAmount)}`);
+    document.getElementById("connector2").setAttribute("points",`${cube.point3.x},${cube.point3.y} ${lerpVal(cube.point7.x, cube.point3.x, lerpAmount)},${lerpVal(cube.point7.y, cube.point3.y, lerpAmount)}`);
+
+    document.getElementById("connector1").setAttribute("points",`${cube.point6.x},${cube.point6.y} ${lerpVal(cube.point2.x, cube.point6.x, lerpAmount)},${lerpVal(cube.point2.y,cube.point6.y,lerpAmount)}`);
+    document.getElementById("connector3").setAttribute("points",`${cube.point8.x},${cube.point8.y} ${lerpVal(cube.point4.x,cube.point8.x,lerpAmount)},${lerpVal(cube.point4.y,cube.point8.y,lerpAmount)}`);
+    lerpAmount -= 0.01;
+    }else{
+        document.getElementById("connector0").setAttribute("points",`${cube.point1.x},${cube.point1.y} ${cube.point5.x},${cube.point5.y}`);
+        document.getElementById("connector2").setAttribute("points",`${cube.point3.x},${cube.point3.y} ${cube.point7.x},${cube.point7.y}`);
+
+        document.getElementById("connector1").setAttribute("points",`${cube.point2.x},${cube.point2.y} ${cube.point6.x},${cube.point6.y}`);
+        document.getElementById("connector3").setAttribute("points",`${cube.point4.x},${cube.point4.y} ${cube.point8.x},${cube.point8.y}`);
+    }
 }
 
 
@@ -96,9 +122,9 @@ function generateConnections(){
         svg.innerHTML += `<polyline class="connectors" id="connector${i}" points="" style="fill:white;stroke:blue;stroke-width:4"></polyline>`
     }
 }
-let r = 0.05;
-let r2 = 0.05;
-let r3 = 0.05;
+let r = 0.02;
+let r2 = 0;
+let r3 = 0;
 function translation1(){
     //r += 0.01;
     //r2++;
@@ -196,9 +222,10 @@ onmousemove = function(e){mouseX = e.clientX;  mouseY = e.clientY; /*console.log
 //     if axis
 
 // }
-
+initialize();
 generateConnections();
 lerp();
+
 
 
 
