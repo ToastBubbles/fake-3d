@@ -7,15 +7,6 @@ let mouseMode = 3;
 
 let cube = {
 
-    /*point1: [100,1,100],
-    point2: [100,1,1],
-    point3: [100,100,100],
-    point4: [100,100,1],//end of square1
-    point5: [-1,-1,1],
-    point6: [-1,1,1],
-    point7: [-1,-1,-1],
-    point8: [-1,1,-1],*/
-
 
     point1: {
         x: -100,
@@ -73,8 +64,11 @@ function lerp(){
         generateConnectors();
         translation1();
         lerp();
+        mouseMagic();
       }, "20");
 }
+
+
 
 function updateSquare(){
 
@@ -112,6 +106,17 @@ function generateConnectors(){
         document.getElementById("connector1").setAttribute("points",`${cube.point2.x},${cube.point2.y} ${cube.point6.x},${cube.point6.y}`);
         document.getElementById("connector3").setAttribute("points",`${cube.point4.x},${cube.point4.y} ${cube.point8.x},${cube.point8.y}`);
     }
+}
+
+function mouseMagic(){
+    if(mouseMode ===3){
+        r = (mouseX/window.screen.width) + 50;
+        r2 = (mouseY/window.screen.width) + 50;
+    }
+    if(r >= 10){
+        //r = 10;
+    }console.log(r)
+   
 }
 
 
