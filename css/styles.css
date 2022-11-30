@@ -1,17 +1,11 @@
-#svg{
-    height: 1000px;
-    width: 2000px;
-    overflow: visible;
-    display: block;
-    margin: auto;
-
-
+#svg {
+  height: 1000px;
+  width: 2000px;
+  overflow: visible;
+  display: block;
+  margin: 0;
 }
 
-.canvas{
-
-    padding: 200px;
-
+.canvas {
+  padding: 200px;
 }
-
-
