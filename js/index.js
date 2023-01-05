@@ -2,7 +2,7 @@ let cubeHalfWidth = 50;
 let mouseX = 0;
 let mouseY = 0;
 
-let mouseMode = 3;
+let mouseMode = 6;
 
 let cube = {
   point1: {
@@ -48,7 +48,7 @@ let cube = {
 };
 
 function initialize() {
-  rotate(0, 0.788, 0);
+  rotate(0.7, 0.788, 0.7);
 }
 
 function lerp() {
@@ -225,7 +225,7 @@ function translation1() {
 
     cube.point4.x = mouseX - cubeHalfWidth;
     cube.point4.y = mouseY + cubeHalfWidth;
-  } else {
+  } else if (mouseMode === 2) {
     rotate(r, r2, r3);
   }
 }

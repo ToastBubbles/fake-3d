@@ -11,13 +11,48 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <!-- #33333300
+    #06f3ff
+    #ff9191 -->
     <div class="canvas">
-    <svg id="svg" class="svg-canvas">
-        <polyline class="box" id="box" points="" style="fill:transparent;stroke:green;stroke-width:4"></polyline>    
-        
-        <polyline class="box2" id="box2" points="" style="fill:transparent;stroke:red;stroke-width:4"></polyline>    
-    </svg>
-</div>
+      <svg id="svg" class="svg-canvas">
+        <defs>
+          <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#ff9191">
+              <animate
+                attributeName="stop-color"
+                attributeType="CSS"
+                values="#ff9191;#06f3ff;#06f3ff;#06f3ff;#06f3ff;#06f3ff;#06f3ff;"
+                dur="2s"
+                repeatCount="indefinite"
+              ></animate>
+            </stop>
+            <stop offset="100%" stop-color="#06f3ff">
+              <animate
+                attributeName="stop-color"
+                attributeType="CSS"
+                values="#ff9191;#ff9191;#ff9191;#ff9191;#ff9191;#ff9191;#06f3ff;"
+                dur="2s"
+                repeatCount="indefinite"
+              ></animate>
+            </stop>
+          </linearGradient>
+        </defs>
+        <polyline
+          class="box"
+          id="box"
+          points=""
+          style="fill: transparent; stroke: url(#gradient1); stroke-width: 4"
+        ></polyline>
+
+        <polyline
+          class="box2"
+          id="box2"
+          points=""
+          style="fill: transparent; stroke: red; stroke-width: 4"
+        ></polyline>
+      </svg>
+    </div>
     <script src="./js/index.js"></script>
   </body>
 </html>
