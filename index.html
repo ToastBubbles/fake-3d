@@ -22,7 +22,16 @@
               <animate
                 attributeName="stop-color"
                 attributeType="CSS"
-                values="#ff9191;#06f3ff;#06f3ff;#06f3ff;#06f3ff;#06f3ff;#06f3ff;"
+                values="#ff9191;#06f3ff;"
+                dur="2s"
+                repeatCount="indefinite"
+              ></animate>
+            </stop>
+            <stop offset="50%" stop-color="#ff9191">
+              <animate
+                attributeName="stop-color"
+                attributeType="CSS"
+                values="#06f3ff;#ff9191;#06f3ff;"
                 dur="2s"
                 repeatCount="indefinite"
               ></animate>
@@ -31,7 +40,7 @@
               <animate
                 attributeName="stop-color"
                 attributeType="CSS"
-                values="#ff9191;#ff9191;#ff9191;#ff9191;#ff9191;#ff9191;#06f3ff;"
+                values="#06f3ff;#ff9191;"
                 dur="2s"
                 repeatCount="indefinite"
               ></animate>
@@ -49,7 +58,7 @@
           class="box2"
           id="box2"
           points=""
-          style="fill: transparent; stroke: red; stroke-width: 4"
+          style="fill: transparent; stroke: url(#gradient1); stroke-width: 4"
         ></polyline>
       </svg>
     </div>
