@@ -260,43 +260,43 @@ function updateSquare() {
     .getElementById("box4")
     .setAttribute(
       "points",
-      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
+      `${cube.point13.x},${cube.point13.y} ${cube.point14.x},${cube.point14.y} ${cube.point15.x},${cube.point15.y} ${cube.point16.x},${cube.point16.y} ${cube.point13.x},${cube.point13.y}`
     );
   document
     .getElementById("box5")
     .setAttribute(
       "points",
-      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
+      `${cube.point17.x},${cube.point17.y} ${cube.point18.x},${cube.point18.y} ${cube.point19.x},${cube.point19.y} ${cube.point20.x},${cube.point20.y} ${cube.point17.x},${cube.point17.y}`
     );
   document
     .getElementById("box6")
     .setAttribute(
       "points",
-      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
+      `${cube.point21.x},${cube.point21.y} ${cube.point22.x},${cube.point22.y} ${cube.point23.x},${cube.point23.y} ${cube.point24.x},${cube.point24.y} ${cube.point21.x},${cube.point21.y}`
     );
   document
     .getElementById("box7")
     .setAttribute(
       "points",
-      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
+      `${cube.point25.x},${cube.point25.y} ${cube.point26.x},${cube.point26.y} ${cube.point27.x},${cube.point27.y} ${cube.point28.x},${cube.point28.y} ${cube.point25.x},${cube.point25.y}`
     );
   document
     .getElementById("box8")
     .setAttribute(
       "points",
-      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
+      `${cube.point29.x},${cube.point29.y} ${cube.point30.x},${cube.point30.y} ${cube.point31.x},${cube.point31.y} ${cube.point32.x},${cube.point32.y} ${cube.point29.x},${cube.point29.y}`
     );
   document
     .getElementById("box9")
     .setAttribute(
       "points",
-      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
+      `${cube.point33.x},${cube.point33.y} ${cube.point34.x},${cube.point34.y} ${cube.point35.x},${cube.point35.y} ${cube.point36.x},${cube.point36.y} ${cube.point33.x},${cube.point33.y}`
     );
   document
     .getElementById("box10")
     .setAttribute(
       "points",
-      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
+      `${cube.point37.x},${cube.point37.y} ${cube.point38.x},${cube.point38.y} ${cube.point39.x},${cube.point39.y} ${cube.point40.x},${cube.point40.y} ${cube.point37.x},${cube.point37.y}`
     );
 
   //document.getElementById("connector0").setAttribute("points",`${cube.point1.x},${cube.point1.y} ${cube.point5.x},${cube.point5.y}`);
