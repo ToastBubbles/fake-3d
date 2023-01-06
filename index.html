@@ -18,146 +18,177 @@
       <svg id="svg" class="svg-canvas">
         <defs>
           <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#ff9191">
+            <stop offset="0%" stop-color="lightblue" stop-opacity=".5">
+              <animate
+                attributeName="stop-color"
+                values="lightblue;blue;red;red;black;red;red;purple;lightblue"
+                dur="14s"
+                repeatCount="indefinite"
+              />
+            </stop>
+            <stop offset="100%" stop-color="lightblue" stop-opacity=".5">
+              <animate
+                attributeName="stop-color"
+                values="lightblue;orange;purple;purple;black;purple;purple;blue;lightblue"
+                dur="14s"
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="offset"
+                values=".95;.80;.60;.40;.20;0;.20;.40;.60;.80;.95"
+                dur="14s"
+                repeatCount="indefinite"
+              />
+            </stop>
+            <!-- <stop offset="0%" stop-color="#ff9191">
               <animate
                 attributeName="stop-color"
                 attributeType="CSS"
-                values="#ff9191;#06f3ff;"
+                values="#ff9191;#06f3ff00;#06f3ff00;#06f3ff00;"
+                dur="2s"
+                repeatCount="indefinite"
+              ></animate>
+            </stop> -->
+            <!-- <stop offset="25%" stop-color="#ff9191">
+              <animate
+                attributeName="stop-color"
+                attributeType="CSS"
+                values="#06f3ff00;#ff9191;#06f3ff00;#06f3ff00;"
                 dur="2s"
                 repeatCount="indefinite"
               ></animate>
             </stop>
-            <stop offset="50%" stop-color="#ff9191">
+            <stop offset="75%" stop-color="#ff9191">
               <animate
                 attributeName="stop-color"
                 attributeType="CSS"
-                values="#06f3ff;#ff9191;#06f3ff;"
+                values="#06f3ff00;#06f3ff00;#ff9191;#06f3ff00;"
                 dur="2s"
                 repeatCount="indefinite"
               ></animate>
-            </stop>
-            <stop offset="100%" stop-color="#06f3ff">
+            </stop> -->
+            <!-- <stop offset="100%" stop-color="#ff9191">
               <animate
                 attributeName="stop-color"
                 attributeType="CSS"
-                values="#06f3ff;#ff9191;#06f3ff;"
+                values="#06f3ff00;#06f3ff00;#06f3ff00;#ff9191;"
                 dur="2s"
                 repeatCount="indefinite"
               ></animate>
-            </stop>
+            </stop> -->
           </linearGradient>
         </defs>
-        <polyline
+        <path
           class="box"
           id="box"
-          points=""
+          d=""
           style="
             fill: url(#gradient1);
-            stroke: url(#gradient1);
+
             stroke-width: 4;
             stroke-linejoin: round;
           "
-        ></polyline>
+        ></path>
 
-        <polyline
+        <path
           class="box2"
           id="box2"
-          points=""
+          d=""
           style="
             fill: url(#gradient1);
-            stroke: url(#gradient1);
+
             stroke-width: 4;
             stroke-linejoin: round;
           "
-        ></polyline>
-        <polyline
+        ></path>
+        <path
           class="box3"
           id="box3"
-          points=""
+          d=""
           style="
             fill: url(#gradient1);
-            stroke: url(#gradient1);
+
             stroke-width: 4;
             stroke-linejoin: round;
           "
-        ></polyline>
-        <polyline
+        ></path>
+        <path
           class="box4"
           id="box4"
-          points=""
+          d=""
           style="
             fill: url(#gradient1);
-            stroke: url(#gradient1);
+
             stroke-width: 4;
             stroke-linejoin: round;
           "
-        ></polyline>
-        <polyline
+        ></path>
+        <path
           class="box5"
           id="box5"
-          points=""
+          d=""
           style="
             fill: url(#gradient1);
-            stroke: url(#gradient1);
+
             stroke-width: 4;
             stroke-linejoin: round;
           "
-        ></polyline>
-        <polyline
+        ></path>
+        <path
           class="box6"
           id="box6"
-          points=""
+          d=""
           style="
             fill: url(#gradient1);
-            stroke: url(#gradient1);
+
             stroke-width: 4;
             stroke-linejoin: round;
           "
-        ></polyline>
-        <polyline
+        ></path>
+        <path
           class="box7"
           id="box7"
-          points=""
+          d=""
           style="
             fill: url(#gradient1);
-            stroke: url(#gradient1);
+
             stroke-width: 4;
             stroke-linejoin: round;
           "
-        ></polyline>
-        <polyline
+        ></path>
+        <path
           class="box8"
           id="box8"
-          points=""
+          d=""
           style="
             fill: url(#gradient1);
-            stroke: url(#gradient1);
+
             stroke-width: 4;
             stroke-linejoin: round;
           "
-        ></polyline>
-        <polyline
+        ></path>
+        <path
           class="box9"
           id="box9"
-          points=""
+          d=""
           style="
             fill: url(#gradient1);
-            stroke: url(#gradient1);
+
             stroke-width: 4;
             stroke-linejoin: round;
           "
-        ></polyline>
-        <polyline
+        ></path>
+        <path
           class="box10"
           id="box10"
-          points=""
+          d=""
           style="
             fill: url(#gradient1);
-            stroke: url(#gradient1);
+
             stroke-width: 4;
             stroke-linejoin: round;
           "
-        ></polyline>
+        ></path>
       </svg>
     </div>
     <script src="./js/index.js"></script>
