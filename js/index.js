@@ -29,190 +29,190 @@ let cube = {
   point5: {
     x: -100,
     y: -100,
-    z: -100,
+    z: 80,
   },
   point6: {
     x: 100,
     y: -100,
-    z: -100,
+    z: 80,
   },
   point7: {
     x: 100,
     y: 100,
-    z: -100,
+    z: 80,
   },
   point8: {
     x: -100,
     y: 100,
-    z: -100,
+    z: 80,
   },
   /**********box3******** */
   point9: {
     x: -50,
     y: -50,
-    z: -50,
+    z: 60,
   },
   point10: {
     x: 50,
     y: -50,
-    z: -50,
+    z: 60,
   },
   point11: {
     x: 50,
     y: 50,
-    z: -50,
+    z: 60,
   },
   point12: {
     x: -50,
     y: 50,
-    z: -50,
+    z: 60,
   },
   /**********box4******** */
-  point9: {
+  point13: {
     x: -50,
     y: -50,
-    z: -50,
+    z: 40,
   },
-  point10: {
+  point14: {
     x: 50,
     y: -50,
-    z: -50,
+    z: 40,
   },
-  point11: {
+  point15: {
     x: 50,
     y: 50,
-    z: -50,
+    z: 40,
   },
-  point12: {
+  point16: {
     x: -50,
     y: 50,
-    z: -50,
+    z: 40,
   },
   /**********box5******** */
-  point9: {
+  point17: {
     x: -50,
     y: -50,
-    z: -50,
+    z: 20,
   },
-  point10: {
+  point18: {
     x: 50,
     y: -50,
-    z: -50,
+    z: 20,
   },
-  point11: {
+  point19: {
     x: 50,
     y: 50,
-    z: -50,
+    z: 20,
   },
-  point12: {
+  point20: {
     x: -50,
     y: 50,
-    z: -50,
+    z: 20,
   },
   /**********box6******** */
-  point9: {
+  point21: {
     x: -50,
     y: -50,
-    z: -50,
+    z: 0,
   },
-  point10: {
+  point22: {
     x: 50,
     y: -50,
-    z: -50,
+    z: 0,
   },
-  point11: {
+  point23: {
     x: 50,
     y: 50,
-    z: -50,
+    z: 0,
   },
-  point12: {
+  point24: {
     x: -50,
     y: 50,
-    z: -50,
-  },
-  /**********box3******** */
-  point9: {
-    x: -50,
-    y: -50,
-    z: -50,
-  },
-  point10: {
-    x: 50,
-    y: -50,
-    z: -50,
-  },
-  point11: {
-    x: 50,
-    y: 50,
-    z: -50,
-  },
-  point12: {
-    x: -50,
-    y: 50,
-    z: -50,
+    z: 0,
   },
   /**********box7******** */
-  point9: {
+  point25: {
     x: -50,
     y: -50,
-    z: -50,
+    z: -20,
   },
-  point10: {
+  point26: {
     x: 50,
     y: -50,
-    z: -50,
+    z: -20,
   },
-  point11: {
+  point27: {
     x: 50,
     y: 50,
-    z: -50,
+    z: -20,
   },
-  point12: {
+  point28: {
     x: -50,
     y: 50,
-    z: -50,
+    z: -20,
   },
   /**********box8******** */
-  point9: {
+  point29: {
     x: -50,
     y: -50,
-    z: -50,
+    z: -40,
   },
-  point10: {
+  point30: {
     x: 50,
     y: -50,
-    z: -50,
+    z: -40,
   },
-  point11: {
+  point31: {
     x: 50,
     y: 50,
-    z: -50,
+    z: -40,
   },
-  point12: {
+  point32: {
     x: -50,
     y: 50,
-    z: -50,
+    z: -40,
   },
   /**********box9******** */
-  point9: {
+  point33: {
     x: -50,
     y: -50,
-    z: -50,
+    z: -60,
   },
-  point10: {
+  point34: {
     x: 50,
     y: -50,
-    z: -50,
+    z: -60,
   },
-  point11: {
+  point35: {
     x: 50,
     y: 50,
-    z: -50,
+    z: -60,
   },
-  point12: {
+  point36: {
     x: -50,
     y: 50,
-    z: -50,
+    z: -60,
+  },
+  /**********box10******** */
+  point37: {
+    x: -50,
+    y: -50,
+    z: -80,
+  },
+  point38: {
+    x: 50,
+    y: -50,
+    z: -80,
+  },
+  point39: {
+    x: 50,
+    y: 50,
+    z: -80,
+  },
+  point40: {
+    x: -50,
+    y: 50,
+    z: -80,
   },
 };
 
@@ -485,6 +485,34 @@ function rotate(pitch, roll, yaw) {
     cube.point10,
     cube.point11,
     cube.point12,
+    cube.point13,
+    cube.point14,
+    cube.point15,
+    cube.point16,
+    cube.point17,
+    cube.point18,
+    cube.point19,
+    cube.point20,
+    cube.point21,
+    cube.point22,
+    cube.point23,
+    cube.point24,
+    cube.point25,
+    cube.point26,
+    cube.point27,
+    cube.point28,
+    cube.point29,
+    cube.point30,
+    cube.point31,
+    cube.point32,
+    cube.point33,
+    cube.point34,
+    cube.point35,
+    cube.point36,
+    cube.point37,
+    cube.point38,
+    cube.point39,
+    cube.point40,
   ];
   for (var i = 0; i < cubepoints.length; i++) {
     var px = cubepoints[i].x;
