@@ -6,25 +6,26 @@ let mouseMode = 6;
 
 let cube = {
   point1: {
-    x: -100,
+    x: -10,
     y: -100,
     z: 100,
   },
   point2: {
-    x: 100,
+    x: 10,
     y: -100,
     z: 100,
   },
   point3: {
-    x: 100,
+    x: 10,
     y: 100,
     z: 100,
   },
   point4: {
-    x: -100,
+    x: -10,
     y: 100,
     z: 100,
   },
+  /**********box2******** */
   point5: {
     x: -100,
     y: -100,
@@ -45,10 +46,181 @@ let cube = {
     y: 100,
     z: -100,
   },
+  /**********box3******** */
+  point9: {
+    x: -50,
+    y: -50,
+    z: -50,
+  },
+  point10: {
+    x: 50,
+    y: -50,
+    z: -50,
+  },
+  point11: {
+    x: 50,
+    y: 50,
+    z: -50,
+  },
+  point12: {
+    x: -50,
+    y: 50,
+    z: -50,
+  },
+  /**********box4******** */
+  point9: {
+    x: -50,
+    y: -50,
+    z: -50,
+  },
+  point10: {
+    x: 50,
+    y: -50,
+    z: -50,
+  },
+  point11: {
+    x: 50,
+    y: 50,
+    z: -50,
+  },
+  point12: {
+    x: -50,
+    y: 50,
+    z: -50,
+  },
+  /**********box5******** */
+  point9: {
+    x: -50,
+    y: -50,
+    z: -50,
+  },
+  point10: {
+    x: 50,
+    y: -50,
+    z: -50,
+  },
+  point11: {
+    x: 50,
+    y: 50,
+    z: -50,
+  },
+  point12: {
+    x: -50,
+    y: 50,
+    z: -50,
+  },
+  /**********box6******** */
+  point9: {
+    x: -50,
+    y: -50,
+    z: -50,
+  },
+  point10: {
+    x: 50,
+    y: -50,
+    z: -50,
+  },
+  point11: {
+    x: 50,
+    y: 50,
+    z: -50,
+  },
+  point12: {
+    x: -50,
+    y: 50,
+    z: -50,
+  },
+  /**********box3******** */
+  point9: {
+    x: -50,
+    y: -50,
+    z: -50,
+  },
+  point10: {
+    x: 50,
+    y: -50,
+    z: -50,
+  },
+  point11: {
+    x: 50,
+    y: 50,
+    z: -50,
+  },
+  point12: {
+    x: -50,
+    y: 50,
+    z: -50,
+  },
+  /**********box7******** */
+  point9: {
+    x: -50,
+    y: -50,
+    z: -50,
+  },
+  point10: {
+    x: 50,
+    y: -50,
+    z: -50,
+  },
+  point11: {
+    x: 50,
+    y: 50,
+    z: -50,
+  },
+  point12: {
+    x: -50,
+    y: 50,
+    z: -50,
+  },
+  /**********box8******** */
+  point9: {
+    x: -50,
+    y: -50,
+    z: -50,
+  },
+  point10: {
+    x: 50,
+    y: -50,
+    z: -50,
+  },
+  point11: {
+    x: 50,
+    y: 50,
+    z: -50,
+  },
+  point12: {
+    x: -50,
+    y: 50,
+    z: -50,
+  },
+  /**********box9******** */
+  point9: {
+    x: -50,
+    y: -50,
+    z: -50,
+  },
+  point10: {
+    x: 50,
+    y: -50,
+    z: -50,
+  },
+  point11: {
+    x: 50,
+    y: 50,
+    z: -50,
+  },
+  point12: {
+    x: -50,
+    y: 50,
+    z: -50,
+  },
 };
 
 function initialize() {
   rotate(0.7, 0.788, 0.7);
+}
+function rot() {
+  rotate(0.01, 0, 0.01);
 }
 
 function lerp() {
@@ -58,6 +230,7 @@ function lerp() {
     translation1();
     lerp();
     mouseMagic();
+    rot();
   }, "20");
 }
 
@@ -76,6 +249,54 @@ function updateSquare() {
     .setAttribute(
       "points",
       `${cube.point5.x},${cube.point5.y} ${cube.point6.x},${cube.point6.y} ${cube.point7.x},${cube.point7.y} ${cube.point8.x},${cube.point8.y} ${cube.point5.x},${cube.point5.y}`
+    );
+  document
+    .getElementById("box3")
+    .setAttribute(
+      "points",
+      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
+    );
+  document
+    .getElementById("box4")
+    .setAttribute(
+      "points",
+      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
+    );
+  document
+    .getElementById("box5")
+    .setAttribute(
+      "points",
+      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
+    );
+  document
+    .getElementById("box6")
+    .setAttribute(
+      "points",
+      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
+    );
+  document
+    .getElementById("box7")
+    .setAttribute(
+      "points",
+      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
+    );
+  document
+    .getElementById("box8")
+    .setAttribute(
+      "points",
+      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
+    );
+  document
+    .getElementById("box9")
+    .setAttribute(
+      "points",
+      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
+    );
+  document
+    .getElementById("box10")
+    .setAttribute(
+      "points",
+      `${cube.point9.x},${cube.point9.y} ${cube.point10.x},${cube.point10.y} ${cube.point11.x},${cube.point11.y} ${cube.point12.x},${cube.point12.y} ${cube.point9.x},${cube.point9.y}`
     );
 
   //document.getElementById("connector0").setAttribute("points",`${cube.point1.x},${cube.point1.y} ${cube.point5.x},${cube.point5.y}`);
@@ -260,6 +481,10 @@ function rotate(pitch, roll, yaw) {
     cube.point6,
     cube.point7,
     cube.point8,
+    cube.point9,
+    cube.point10,
+    cube.point11,
+    cube.point12,
   ];
   for (var i = 0; i < cubepoints.length; i++) {
     var px = cubepoints[i].x;
